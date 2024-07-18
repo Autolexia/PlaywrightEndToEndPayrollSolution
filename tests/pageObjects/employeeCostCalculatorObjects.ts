@@ -7,5 +7,16 @@ class EmployeeCostCalculatorObjects {
         this._page = page;
     }
 
+    locationInput = async (): Promise<Locator> => await this._page.locator('[placeholder="Select a country"]');
+    locationOptionZero = async (): Promise<Locator> => await this._page.locator('#country-select-listbox #country-select-option-0');
+    currencyInput = async (): Promise<Locator> => await this._page.locator('[placeholder="Select Currency"]');
+    currencyOptionZero = async (): Promise<Locator> => await this._page.locator('li > p:has-text("AUD")');
+    monthlyButton = async (): Promise<Locator> => await this._page.locator('[value="monthly"]');
+    annualButton = async (): Promise<Locator> => await this._page.locator('[value="annual"]');
+    localButton = async (): Promise<Locator> => await this._page.locator('[value="local"]');
+    billingButton = async (): Promise<Locator> => await this._page.locator('[value="billing"]');
+    amountInput = async (): Promise<Locator> => await this._page.locator('[name="amount"]');
     quoteButton = async (): Promise<Locator> => await this._page.locator('button:has-text("Get Quote")');
+    copyLinkButton = async (): Promise<Locator> => await this._page.locator('button:has-text("Copy Link")');
+    overlayHeading = async (): Promise<Locator> => await this._page.locator('p:has-text("Your Quote Will Show Up Here")');
 }
