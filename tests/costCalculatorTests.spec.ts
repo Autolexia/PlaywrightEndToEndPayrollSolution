@@ -44,7 +44,7 @@ test.describe('Employee Cost Calculator Tests', () => {
     expect(amountInputValue).toEqual("");
   });
 
-  test('Given the employee-cost-calculator page, When landing on page, Then the Monthly button is selected by default and Amount input heading reads as Monthly Gross Salary', async () => {
+  test('Given the employee-cost-calculator page, When landing on page, Then the Monthly button is selected by default', async () => {
     // Act
     const monthlyButton = await employeeCostCalculatorPage.getMonthlyButton();
 
